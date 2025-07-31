@@ -1,0 +1,528 @@
+DEBUG - 2025-07-30 10:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 10:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 10:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 10:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 10:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 10:18:38 --> ErrorException: Undefined array key "nama_lengkap"
+[Method: GET, Route: admin/analisasoal]
+in APPPATH\Views\admin\analisasoal\index.php on line 82.
+ 1 APPPATH\Views\admin\analisasoal\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php', 82)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/analisasoal/index', [], true)
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(37): view('admin/analisasoal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\analisasoalcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\analisasoalcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 11:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 11:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-30 11:55:13 --> mysqli_sql_exception: Unknown column 'jadwal_ujian.nama_ujian' in 'field list' in C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `analisa...', 0)
+#1 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `analisa...')
+#2 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `analisa...')
+#3 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2-\app\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2-\app\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+#8 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+#9 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+#10 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\cbt-aktara-v2-\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-07-30 11:55:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal_ujian.nama_ujian' in 'field list'
+[Method: GET, Route: admin/analisasoal]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+CRITICAL - 2025-07-30 11:55:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal_ujian.nama_ujian' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+CRITICAL - 2025-07-30 11:55:13 --> [Caused by] mysqli_sql_exception: Unknown column 'jadwal_ujian.nama_ujian' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`nama_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 11:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-30 11:56:04 --> mysqli_sql_exception: Unknown column 'jadwal_ujian.jenis_ujian' in 'field list' in C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `analisa...', 0)
+#1 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `analisa...')
+#2 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `analisa...')
+#3 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2-\app\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2-\app\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+#8 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+#9 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+#10 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\cbt-aktara-v2-\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\cbt-aktara-v2-\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-07-30 11:56:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal_ujian.jenis_ujian' in 'field list'
+[Method: GET, Route: admin/analisasoal]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+CRITICAL - 2025-07-30 11:56:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal_ujian.jenis_ujian' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+CRITICAL - 2025-07-30 11:56:04 --> [Caused by] mysqli_sql_exception: Unknown column 'jadwal_ujian.jenis_ujian' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `analisa_soal`.*, `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `soal`.`soal`, `soal`.`jawaban` AS `kunci_jawaban`, `soal`.`bobot`, `bank_soal`.`bank_code`, `jadwal_ujian`.`jenis_ujian`
+FROM `analisa_soal`
+JOIN `nomor_peserta` ON `nomor_peserta`.`id_peserta` = `analisa_soal`.`id_nomor`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+JOIN `soal` ON `soal`.`id_soal` = `analisa_soal`.`id_soal`
+JOIN `bank_soal` ON `bank_soal`.`id_bank` = `soal`.`id_bank`
+JOIN `jadwal_ujian` ON `jadwal_ujian`.`id_jadwal` = `analisa_soal`.`id_jadwal`
+ORDER BY `analisa_soal`.`id_analisa` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AnalisaSoalModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\admin\analisasoalcontroller.php(34): App\Models\AnalisaSoalModel->getAnalisaFiltered('all', 'all')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 11:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 11:58:21 --> ErrorException: Undefined array key "nama_ujian"
+[Method: GET, Route: admin/analisasoal]
+in APPPATH\Views\admin\analisasoal\index.php on line 53.
+ 1 APPPATH\Views\admin\analisasoal\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_ujian"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/analisasoal/index', [], true)
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(41): view('admin/analisasoal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 11:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 11:58:59 --> ErrorException: Undefined array key "nama_ujian"
+[Method: GET, Route: admin/analisasoal]
+in APPPATH\Views\admin\analisasoal\index.php on line 53.
+ 1 APPPATH\Views\admin\analisasoal\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_ujian"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/analisasoal/index', [], true)
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(41): view('admin/analisasoal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 11:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 11:59:43 --> ErrorException: Undefined array key "nama_siswa"
+[Method: GET, Route: admin/analisasoal]
+in APPPATH\Views\admin\analisasoal\index.php on line 89.
+ 1 APPPATH\Views\admin\analisasoal\index.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_siswa"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php', 89)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/analisasoal/index', [], true)
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(41): view('admin/analisasoal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 12:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 12:00:11 --> ErrorException: Undefined array key "jawaban_benar"
+[Method: GET, Route: admin/analisasoal]
+in APPPATH\Views\admin\analisasoal\index.php on line 94.
+ 1 APPPATH\Views\admin\analisasoal\index.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jawaban_benar"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php', 94)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/analisasoal/index', [], true)
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(41): view('admin/analisasoal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 12:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 12:02:02 --> ErrorException: Undefined array key "jawaban"
+[Method: GET, Route: admin/analisasoal]
+in APPPATH\Views\admin\analisasoal\index.php on line 94.
+ 1 APPPATH\Views\admin\analisasoal\index.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jawaban"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php', 94)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/analisasoal/index', [], true)
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(41): view('admin/analisasoal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 12:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 12:03:46 --> ErrorException: Undefined array key "skor"
+[Method: GET, Route: admin/analisasoal]
+in APPPATH\Views\admin\analisasoal\index.php on line 93.
+ 1 APPPATH\Views\admin\analisasoal\index.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "skor"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php', 93)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\admin\\analisasoal\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/analisasoal/index', [], true)
+ 5 APPPATH\Controllers\admin\analisasoalcontroller.php(41): view('admin/analisasoal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AnalisaSoalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AnalisaSoalController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 12:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 12:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 15:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 15:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 15:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 15:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 15:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 15:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 15:40:25 --> ErrorException: Array to string conversion
+[Method: GET, Route: siswa/ujian/hasil]
+in APPPATH\Views\siswa\ujian\hasil\index.php on line 85.
+ 1 APPPATH\Views\siswa\ujian\hasil\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/ujian/hasil/index', [], true)
+ 5 APPPATH\Controllers\siswa\HasilUjian.php(76): view('siswa/ujian/hasil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\HasilUjian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\HasilUjian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 15:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 15:42:56 --> ErrorException: Array to string conversion
+[Method: GET, Route: siswa/ujian/hasil]
+in APPPATH\Views\siswa\ujian\hasil\index.php on line 96.
+ 1 APPPATH\Views\siswa\ujian\hasil\index.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php', 96)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/ujian/hasil/index', [], true)
+ 5 APPPATH\Controllers\siswa\HasilUjian.php(76): view('siswa/ujian/hasil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\HasilUjian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\HasilUjian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 15:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 15:43:57 --> ErrorException: Undefined array key "nama_mapel"
+[Method: GET, Route: siswa/ujian/hasil]
+in APPPATH\Views\siswa\ujian\hasil\index.php on line 96.
+ 1 APPPATH\Views\siswa\ujian\hasil\index.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_mapel"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php', 96)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/ujian/hasil/index', [], true)
+ 5 APPPATH\Controllers\siswa\HasilUjian.php(76): view('siswa/ujian/hasil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\HasilUjian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\HasilUjian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 15:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 15:44:54 --> ErrorException: Undefined array key "id_jenis_ujian"
+[Method: GET, Route: siswa/ujian/hasil]
+in APPPATH\Views\siswa\ujian\hasil\index.php on line 85.
+ 1 APPPATH\Views\siswa\ujian\hasil\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jenis_ujian"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/ujian/hasil/index', [], true)
+ 5 APPPATH\Controllers\siswa\HasilUjian.php(76): view('siswa/ujian/hasil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\HasilUjian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\HasilUjian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 15:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 15:45:41 --> ErrorException: Array to string conversion
+[Method: GET, Route: siswa/ujian/hasil]
+in APPPATH\Views\siswa\ujian\hasil\index.php on line 14.
+ 1 APPPATH\Views\siswa\ujian\hasil\index.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php', 14)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/ujian/hasil/index', [], true)
+ 5 APPPATH\Controllers\siswa\HasilUjian.php(76): view('siswa/ujian/hasil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\HasilUjian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\HasilUjian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 15:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-30 15:47:28 --> ErrorException: Undefined array key "id_mapel"
+[Method: GET, Route: siswa/ujian/hasil]
+in APPPATH\Views\siswa\ujian\hasil\index.php on line 85.
+ 1 APPPATH\Views\siswa\ujian\hasil\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_mapel"', 'C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2-\\app\\Views\\siswa\\ujian\\hasil\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/ujian/hasil/index', [], true)
+ 5 APPPATH\Controllers\siswa\HasilUjian.php(76): view('siswa/ujian/hasil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa\HasilUjian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa\HasilUjian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2-\\public\\index.php')
+DEBUG - 2025-07-30 15:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 15:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-30 16:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

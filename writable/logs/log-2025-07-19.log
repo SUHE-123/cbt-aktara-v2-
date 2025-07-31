@@ -1,0 +1,1024 @@
+DEBUG - 2025-07-19 02:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 02:49:40 --> mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'field list' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_p...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_p...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_p...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_p...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 02:49:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'field list'
+[Method: GET, Route: admin/kartupeserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 02:49:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 02:49:40 --> [Caused by] mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 02:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 02:50:12 --> mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'field list' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_p...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_p...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_p...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_p...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 02:50:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'field list'
+[Method: GET, Route: admin/kartupeserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 02:50:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 02:50:12 --> [Caused by] mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`id_sekolah`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 02:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 02:55:11 --> mysqli_sql_exception: Unknown column 'users.id_siswa' in 'on clause' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_p...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_p...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_p...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_p...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 02:55:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id_siswa' in 'on clause'
+[Method: GET, Route: admin/kartupeserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 02:55:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id_siswa' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 02:55:11 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id_siswa' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.*, `siswa`.`nama_lengkap`, `siswa`.`nis`, `siswa`.`kelas`, `siswa`.`sekolah_id`, `users`.`username`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\admin\kartupesertacontroller.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 02:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 02:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 02:57:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/kartupeserta/cetak.php"
+[Method: GET, Route: admin/kartupeserta/cetak/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/kartupeserta/cetak.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/cetak', [], true)
+ 3 APPPATH\Controllers\admin\kartupesertacontroller.php(62): view('admin/kartupeserta/cetak', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->cetak('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 03:00:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/kartupeserta/cetak.php"
+[Method: GET, Route: admin/kartupeserta/cetak/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/kartupeserta/cetak.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/cetak', [], true)
+ 3 APPPATH\Controllers\admin\kartupesertacontroller.php(62): view('admin/kartupeserta/cetak', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->cetak('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 03:15:39 --> ErrorException: Undefined array key "nomor"
+[Method: GET, Route: admin/kartupeserta]
+in APPPATH\Views\admin\kartupeserta\index.php on line 99.
+ 1 APPPATH\Views\admin\kartupeserta\index.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomor"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\index.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/index', [], true)
+ 5 APPPATH\Controllers\admin\kartupesertacontroller.php(41): view('admin/kartupeserta/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 03:16:38 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/kartupeserta]
+in APPPATH\Views\admin\kartupeserta\index.php on line 101.
+ 1 APPPATH\Views\admin\kartupeserta\index.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\index.php', 101)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/index', [], true)
+ 5 APPPATH\Controllers\admin\kartupesertacontroller.php(41): view('admin/kartupeserta/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 03:17:04 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/kartupeserta]
+in APPPATH\Views\admin\kartupeserta\index.php on line 101.
+ 1 APPPATH\Views\admin\kartupeserta\index.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\index.php', 101)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/index', [], true)
+ 5 APPPATH\Controllers\admin\kartupesertacontroller.php(41): view('admin/kartupeserta/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 03:18:18 --> ErrorException: Undefined array key "nomor"
+[Method: GET, Route: admin/kartupeserta/cetak_kelas/12]
+in APPPATH\Views\admin\kartupeserta\cetak_kelas.php on line 55.
+ 1 APPPATH\Views\admin\kartupeserta\cetak_kelas.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomor"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\cetak_kelas.php', 55)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\cetak_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/cetak_kelas', [], true)
+ 5 APPPATH\Controllers\admin\kartupesertacontroller.php(104): view('admin/kartupeserta/cetak_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->cetak_kelas('12')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 03:20:59 --> TypeError: Endroid\QrCode\Builder\Builder::data(): Argument #1 ($data) must be of type string, null given, called in C:\laragon\www\cbt-aktara-v2\app\Views\admin\kartupeserta\cetak_semua.php on line 58
+[Method: GET, Route: admin/kartupeserta/cetak_semua]
+in VENDORPATH\endroid\qr-code\src\Builder\Builder.php on line 92.
+ 1 APPPATH\Views\admin\kartupeserta\cetak_semua.php(58): Endroid\QrCode\Builder\Builder->data(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\cetak_semua.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/cetak_semua', [], true)
+ 5 APPPATH\Controllers\admin\kartupesertacontroller.php(80): view('admin/kartupeserta/cetak_semua', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->cetak_semua()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 03:24:39 --> TypeError: Endroid\QrCode\Builder\Builder::data(): Argument #1 ($data) must be of type string, null given, called in C:\laragon\www\cbt-aktara-v2\app\Views\admin\kartupeserta\cetak_semua.php on line 58
+[Method: GET, Route: admin/kartupeserta/cetak_semua]
+in VENDORPATH\endroid\qr-code\src\Builder\Builder.php on line 92.
+ 1 APPPATH\Views\admin\kartupeserta\cetak_semua.php(58): Endroid\QrCode\Builder\Builder->data(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\kartupeserta\\cetak_semua.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartupeserta/cetak_semua', [], true)
+ 5 APPPATH\Controllers\admin\kartupesertacontroller.php(80): view('admin/kartupeserta/cetak_semua', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->cetak_semua()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 03:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 03:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 04:08:55 --> mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'on clause' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_p...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_p...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_p...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_p...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 04:08:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'on clause'
+[Method: GET, Route: admin/kartupeserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:08:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:08:55 --> [Caused by] mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+ERROR - 2025-07-19 04:10:10 --> mysqli_sql_exception: Unknown column 'users.id_siswa' in 'on clause' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_p...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_p...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_p...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_p...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 04:10:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id_siswa' in 'on clause'
+[Method: GET, Route: admin/kartupeserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:10:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id_siswa' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:10:10 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id_siswa' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`sekolah_id`
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\admin\kartupesertacontroller.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:10:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/kartu_peserta/index.php"
+[Method: GET, Route: admin/kartupeserta]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/kartu_peserta/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kartu_peserta/index', [], true)
+ 3 APPPATH\Controllers\admin\kartupesertacontroller.php(53): view('admin/kartu_peserta/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\kartupesertacontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\kartupesertacontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 04:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 04:25:32 --> mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'on clause' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_p...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_p...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_p...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_p...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\kartupesertacontroller.php(61): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\KartuPesertaController->index()
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KartuPesertaController))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 04:25:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'on clause'
+[Method: GET, Route: admin/kartupeserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = :siswa.kelas:
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\admin\kartupesertacontroller.php(61): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KartuPesertaController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KartuPesertaController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:25:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_sekolah' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = \'12\'
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = \'12\'
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = :siswa.kelas:
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\admin\kartupesertacontroller.php(61): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KartuPesertaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KartuPesertaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:25:32 --> [Caused by] mysqli_sql_exception: Unknown column 'siswa.id_sekolah' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = \'12\'
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = \'12\'
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = \'12\'
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_peserta`.`nomor_peserta`, `siswa`.`nama_lengkap`, `siswa`.`kelas`, `users`.`username`, `users`.`foto`, `sekolah`.`nama_sekolah`, `sekolah`.`logo`
+FROM `nomor_peserta`
+JOIN `siswa` ON `siswa`.`id` = `nomor_peserta`.`id_siswa`
+LEFT JOIN `users` ON `users`.`id_siswa` = `siswa`.`id`
+LEFT JOIN `sekolah` ON `sekolah`.`id` = `siswa`.`id_sekolah`
+WHERE `siswa`.`kelas` = :siswa.kelas:
+ORDER BY `siswa`.`kelas`, `siswa`.`nama_lengkap`', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\admin\kartupesertacontroller.php(61): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\KartuPesertaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KartuPesertaController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 04:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 04:31:58 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`)) in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(1161): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 04:31:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`))
+[Method: POST, Route: admin/siswa/delete/7]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `siswa`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1161): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:31:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `siswa`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1161): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:31:58 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `siswa`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1161): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 04:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 04:34:55 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`)) in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(1161): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2025-07-19 04:34:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`))
+[Method: POST, Route: admin/siswa/delete/7]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `siswa`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1161): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:34:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `siswa`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1161): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 04:34:55 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`admin`.`nomor_peserta`, CONSTRAINT `nomor_peserta_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `siswa`
+WHERE `id` IN (\'7\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `siswa`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1161): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\admin\siswa.php(92): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->delete('7')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 04:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 04:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-19 05:36:44 --> mysqli_sql_exception: Duplicate entry '2310614003' for key 'siswa.nis' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(52): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-07-19 05:36:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2310614003' for key 'siswa.nis'
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :user_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(52): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 05:36:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2310614003' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'Rizqi Nurjaya\', \'2310614003\', \'L\', \'12\', \'Jl. Bojong Kaler\', \'09897798789\', \'suhen@gmail.com\', \'aktif\', \'2\', \'9\', \'2025-07-19 05:36:42\', \'2025-07-19 05:36:42\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'Rizqi Nurjaya\', \'2310614003\', \'L\', \'12\', \'Jl. Bojong Kaler\', \'09897798789\', \'suhen@gmail.com\', \'aktif\', \'2\', \'9\', \'2025-07-19 05:36:42\', \'2025-07-19 05:36:42\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :user_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(52): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-07-19 05:36:44 --> [Caused by] mysqli_sql_exception: Duplicate entry '2310614003' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'Rizqi Nurjaya\', \'2310614003\', \'L\', \'12\', \'Jl. Bojong Kaler\', \'09897798789\', \'suhen@gmail.com\', \'aktif\', \'2\', \'9\', \'2025-07-19 05:36:42\', \'2025-07-19 05:36:42\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'Rizqi Nurjaya\', \'2310614003\', \'L\', \'12\', \'Jl. Bojong Kaler\', \'09897798789\', \'suhen@gmail.com\', \'aktif\', \'2\', \'9\', \'2025-07-19 05:36:42\', \'2025-07-19 05:36:42\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (\'Rizqi Nurjaya\', \'2310614003\', \'L\', \'12\', \'Jl. Bojong Kaler\', \'09897798789\', \'suhen@gmail.com\', \'aktif\', \'2\', \'9\', \'2025-07-19 05:36:42\', \'2025-07-19 05:36:42\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `user_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :user_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(52): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 05:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 05:49:46 --> ErrorException: Undefined variable $peserta
+[Method: GET, Route: admin/kartupeserta]
+in APPPATH\Controllers\admin\kartupesertacontroller.php on line 79.
+ 1 APPPATH\Controllers\admin\kartupesertacontroller.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $peserta', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Controllers\\admin\\kartupesertacontroller.php', 79)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Controllers\\admin\\kartupesertacontroller.php')
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\laragon\\www\\cbt-aktara-v2\\vendor\\composer/../../app\\Controllers\\Admin\\KartuPesertaController.php')
+ 4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Admin\\KartuPesertaController')
+ 5 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Admin\\KartuPesertaController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 05:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 05:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 06:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-19 06:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-19 06:27:46 --> CodeIgniter\Filters\Exceptions\FilterException: "role" filter must have a matching alias defined.
+[Method: GET, Route: admin/statusujian]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('role')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('role:admin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-07-19 06:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

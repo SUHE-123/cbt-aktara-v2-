@@ -1,0 +1,1352 @@
+DEBUG - 2025-06-26 00:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 00:16:23 --> ErrorException: Undefined variable $users
+[Method: GET, Route: admin/siswa/create]
+in APPPATH\Views\admin\siswa\create.php on line 61.
+ 1 APPPATH\Views\admin\siswa\create.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\create.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/siswa/create', [], true)
+ 5 APPPATH\Controllers\admin\siswa.php(27): view('admin/siswa/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 00:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-06-26 00:44:44 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\admin\siswa.php on line 42.
+ 1 APPPATH\Controllers\admin\siswa.php(42): password_hash(null, '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+ERROR - 2025-06-26 00:44:46 --> mysqli_sql_exception: Column 'username' cannot be null in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-06-26 00:44:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:44:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$pt39Phy8UpdthBht0UYtq.qOKV9yitlBy/yO117MfnPeDImzrdF0a\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:44:44\', \'2025-06-26 00:44:44\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$pt39Phy8UpdthBht0UYtq.qOKV9yitlBy/yO117MfnPeDImzrdF0a\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:44:44\', \'2025-06-26 00:44:44\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:44:46 --> [Caused by] mysqli_sql_exception: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$pt39Phy8UpdthBht0UYtq.qOKV9yitlBy/yO117MfnPeDImzrdF0a\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:44:44\', \'2025-06-26 00:44:44\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$pt39Phy8UpdthBht0UYtq.qOKV9yitlBy/yO117MfnPeDImzrdF0a\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:44:44\', \'2025-06-26 00:44:44\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$pt39Phy8UpdthBht0UYtq.qOKV9yitlBy/yO117MfnPeDImzrdF0a\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:44:44\', \'2025-06-26 00:44:44\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 00:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-06-26 00:45:21 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\admin\siswa.php on line 42.
+ 1 APPPATH\Controllers\admin\siswa.php(42): password_hash(null, '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+ERROR - 2025-06-26 00:45:23 --> mysqli_sql_exception: Column 'username' cannot be null in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-06-26 00:45:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:45:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$WCq2.i7RAwG/9BK.tKpfIuIpy1TthF09K61rdtwgpKPDQisiv9PVi\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:45:21\', \'2025-06-26 00:45:21\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$WCq2.i7RAwG/9BK.tKpfIuIpy1TthF09K61rdtwgpKPDQisiv9PVi\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:45:21\', \'2025-06-26 00:45:21\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:45:23 --> [Caused by] mysqli_sql_exception: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$WCq2.i7RAwG/9BK.tKpfIuIpy1TthF09K61rdtwgpKPDQisiv9PVi\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:45:21\', \'2025-06-26 00:45:21\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$WCq2.i7RAwG/9BK.tKpfIuIpy1TthF09K61rdtwgpKPDQisiv9PVi\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:45:21\', \'2025-06-26 00:45:21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'Asep Suhendar Alidzkar\', \'2310614003\', NULL, \'$2y$10$WCq2.i7RAwG/9BK.tKpfIuIpy1TthF09K61rdtwgpKPDQisiv9PVi\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:45:21\', \'2025-06-26 00:45:21\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 00:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-06-26 00:47:09 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\admin\siswa.php on line 42.
+ 1 APPPATH\Controllers\admin\siswa.php(42): password_hash(null, '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+ERROR - 2025-06-26 00:47:11 --> mysqli_sql_exception: Column 'username' cannot be null in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-06-26 00:47:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:47:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$DS6IlDcomp/O3kZ481dUm.5f1OuLmA36JW/joSXcQQpo9iXemnO76\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:47:09\', \'2025-06-26 00:47:09\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$DS6IlDcomp/O3kZ481dUm.5f1OuLmA36JW/joSXcQQpo9iXemnO76\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:47:09\', \'2025-06-26 00:47:09\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:47:11 --> [Caused by] mysqli_sql_exception: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$DS6IlDcomp/O3kZ481dUm.5f1OuLmA36JW/joSXcQQpo9iXemnO76\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:47:09\', \'2025-06-26 00:47:09\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$DS6IlDcomp/O3kZ481dUm.5f1OuLmA36JW/joSXcQQpo9iXemnO76\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:47:09\', \'2025-06-26 00:47:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$DS6IlDcomp/O3kZ481dUm.5f1OuLmA36JW/joSXcQQpo9iXemnO76\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:47:09\', \'2025-06-26 00:47:09\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 00:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 00:53:21 --> mysqli_sql_exception: Duplicate entry '2323423423' for key 'siswa.nis' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-06-26 00:53:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2323423423' for key 'siswa.nis'
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:53:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2323423423' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:53:19\', \'2025-06-26 00:53:19\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:53:19\', \'2025-06-26 00:53:19\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:53:21 --> [Caused by] mysqli_sql_exception: Duplicate entry '2323423423' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:53:19\', \'2025-06-26 00:53:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:53:19\', \'2025-06-26 00:53:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\', \'2025-06-26 00:53:19\', \'2025-06-26 00:53:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 00:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 00:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-06-26 00:55:30 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\admin\siswa.php on line 42.
+ 1 APPPATH\Controllers\admin\siswa.php(42): password_hash(null, '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+ERROR - 2025-06-26 00:55:32 --> mysqli_sql_exception: Column 'username' cannot be null in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-06-26 00:55:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:55:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$o0lhQPvYop.aVf61aFntee3tOu4CWyMshfIHAmTA46yWHd6KIO2kG\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:55:30\', \'2025-06-26 00:55:30\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$o0lhQPvYop.aVf61aFntee3tOu4CWyMshfIHAmTA46yWHd6KIO2kG\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:55:30\', \'2025-06-26 00:55:30\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:55:32 --> [Caused by] mysqli_sql_exception: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$o0lhQPvYop.aVf61aFntee3tOu4CWyMshfIHAmTA46yWHd6KIO2kG\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:55:30\', \'2025-06-26 00:55:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$o0lhQPvYop.aVf61aFntee3tOu4CWyMshfIHAmTA46yWHd6KIO2kG\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:55:30\', \'2025-06-26 00:55:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', NULL, \'$2y$10$o0lhQPvYop.aVf61aFntee3tOu4CWyMshfIHAmTA46yWHd6KIO2kG\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:55:30\', \'2025-06-26 00:55:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `username`, `password`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :username:, :password:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(50): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+ERROR - 2025-06-26 00:58:14 --> mysqli_sql_exception: Duplicate entry '2323423423' for key 'siswa.nis' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-06-26 00:58:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2323423423' for key 'siswa.nis'
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:58:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2323423423' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:58:12\', \'2025-06-26 00:58:12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:58:12\', \'2025-06-26 00:58:12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:58:14 --> [Caused by] mysqli_sql_exception: Duplicate entry '2323423423' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:58:12\', \'2025-06-26 00:58:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:58:12\', \'2025-06-26 00:58:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:58:12\', \'2025-06-26 00:58:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+ERROR - 2025-06-26 00:59:53 --> mysqli_sql_exception: Duplicate entry '2323423423' for key 'siswa.nis' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `si...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-06-26 00:59:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2323423423' for key 'siswa.nis'
+[Method: POST, Route: admin/siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:59:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2323423423' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:59:51\', \'2025-06-26 00:59:51\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:59:51\', \'2025-06-26 00:59:51\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 00:59:53 --> [Caused by] mysqli_sql_exception: Duplicate entry '2323423423' for key 'siswa.nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:59:51\', \'2025-06-26 00:59:51\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:59:51\', \'2025-06-26 00:59:51\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (\'asep\', \'2323423423\', \'L\', \'12\', \'Perumahan Buana Suites Sukarindik No. B6\', \'09897798789\', \'asepsuhendaralidzkar@gmail.com\', \'nonaktif\', \'1\', \'2025-06-26 00:59:51\', \'2025-06-26 00:59:51\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`nama_lengkap`, `nis`, `jenis_kelamin`, `kelas`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nis:, :jenis_kelamin:, :kelas:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin\siswa.php(48): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 01:01:44 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin/siswa]
+in APPPATH\Views\admin\siswa\index.php on line 88.
+ 1 APPPATH\Views\admin\siswa\index.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php', 88)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/siswa/index', [], true)
+ 5 APPPATH\Controllers\admin\siswa.php(26): view('admin/siswa/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 01:05:09 --> mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `siswa` ...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `siswa` ...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `siswa` ...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` ...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(1031): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(863): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\siswa.php(83): CodeIgniter\Model->update('5', Array)
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\Siswa->update('5')
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-06-26 01:05:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'username' in 'field list'
+[Method: POST, Route: admin/siswa/update/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` SET `nama_lengkap` = :nama_lengkap:, `nis` = :nis:, `username` = :username:, `jenis_kelamin` = :jenis_kelamin:, `kelas` = :kelas:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:, `updated_at` = :updated_at:
+WHERE `siswa`.`id` IN :siswa.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\siswa.php(83): CodeIgniter\Model->update('5', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->update('5')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 01:05:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `siswa` SET `nama_lengkap` = \'asep\', `nis` = \'2310614003\', `username` = NULL, `jenis_kelamin` = \'L\', `kelas` = \'12\', `alamat` = \'Perumahan Buana Suites Sukarindik No. B6\', `kontak` = \'09897798789\', `email` = \'asepsuhendaralidzkar@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\', `updated_at` = \'2025-06-26 01:05:07\'
+WHERE `siswa`.`id` IN (\'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `siswa` SET `nama_lengkap` = \'asep\', `nis` = \'2310614003\', `username` = NULL, `jenis_kelamin` = \'L\', `kelas` = \'12\', `alamat` = \'Perumahan Buana Suites Sukarindik No. B6\', `kontak` = \'09897798789\', `email` = \'asepsuhendaralidzkar@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\', `updated_at` = \'2025-06-26 01:05:07\'
+WHERE `siswa`.`id` IN (\'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` SET `nama_lengkap` = :nama_lengkap:, `nis` = :nis:, `username` = :username:, `jenis_kelamin` = :jenis_kelamin:, `kelas` = :kelas:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:, `updated_at` = :updated_at:
+WHERE `siswa`.`id` IN :siswa.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\admin\siswa.php(83): CodeIgniter\Model->update('5', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->update('5')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 01:05:09 --> [Caused by] mysqli_sql_exception: Unknown column 'username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `siswa` SET `nama_lengkap` = \'asep\', `nis` = \'2310614003\', `username` = NULL, `jenis_kelamin` = \'L\', `kelas` = \'12\', `alamat` = \'Perumahan Buana Suites Sukarindik No. B6\', `kontak` = \'09897798789\', `email` = \'asepsuhendaralidzkar@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\', `updated_at` = \'2025-06-26 01:05:07\'
+WHERE `siswa`.`id` IN (\'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `siswa` SET `nama_lengkap` = \'asep\', `nis` = \'2310614003\', `username` = NULL, `jenis_kelamin` = \'L\', `kelas` = \'12\', `alamat` = \'Perumahan Buana Suites Sukarindik No. B6\', `kontak` = \'09897798789\', `email` = \'asepsuhendaralidzkar@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\', `updated_at` = \'2025-06-26 01:05:07\'
+WHERE `siswa`.`id` IN (\'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `siswa` SET `nama_lengkap` = \'asep\', `nis` = \'2310614003\', `username` = NULL, `jenis_kelamin` = \'L\', `kelas` = \'12\', `alamat` = \'Perumahan Buana Suites Sukarindik No. B6\', `kontak` = \'09897798789\', `email` = \'asepsuhendaralidzkar@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\', `updated_at` = \'2025-06-26 01:05:07\'
+WHERE `siswa`.`id` IN (\'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` SET `nama_lengkap` = :nama_lengkap:, `nis` = :nis:, `username` = :username:, `jenis_kelamin` = :jenis_kelamin:, `kelas` = :kelas:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:, `updated_at` = :updated_at:
+WHERE `siswa`.`id` IN :siswa.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\admin\siswa.php(83): CodeIgniter\Model->update('5', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->update('5')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 01:26:17 --> ErrorException: Undefined variable $siswa
+[Method: GET, Route: admin/siswa]
+in APPPATH\Views\admin\siswa\index.php on line 83.
+ 1 APPPATH\Views\admin\siswa\index.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $siswa', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php', 83)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/siswa/index', [], true)
+ 5 APPPATH\Controllers\admin\siswa.php(31): view('admin/siswa/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 01:27:17 --> ErrorException: Undefined variable $data
+[Method: GET, Route: admin/siswa]
+in APPPATH\Views\admin\siswa\index.php on line 83.
+ 1 APPPATH\Views\admin\siswa\index.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php', 83)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/siswa/index', [], true)
+ 5 APPPATH\Controllers\admin\siswa.php(31): view('admin/siswa/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 01:28:50 --> ErrorException: Undefined variable $siswa
+[Method: GET, Route: admin/siswa]
+in APPPATH\Views\admin\siswa\index.php on line 83.
+ 1 APPPATH\Views\admin\siswa\index.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $siswa', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php', 83)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\siswa\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/siswa/index', [], true)
+ 5 APPPATH\Controllers\admin\siswa.php(31): view('admin/siswa/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 01:51:01 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin/guru]
+in APPPATH\Views\admin\guru\index.php on line 87.
+ 1 APPPATH\Views\admin\guru\index.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\guru\\index.php', 87)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\guru\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/guru/index', [], true)
+ 5 APPPATH\Controllers\admin\guru.php(31): view('admin/guru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 01:58:20 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: admin/guru]
+in APPPATH\Views\admin\guru\index.php on line 80.
+ 1 APPPATH\Views\admin\guru\index.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\guru\\index.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\guru\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/guru/index', [], true)
+ 5 APPPATH\Controllers\admin\guru.php(31): view('admin/guru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 01:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 01:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 01:59:54 --> ErrorException: Undefined array key "user_nama"
+[Method: GET, Route: admin/guru]
+in APPPATH\Views\admin\guru\index.php on line 82.
+ 1 APPPATH\Views\admin\guru\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_nama"', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\guru\\index.php', 82)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\guru\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/guru/index', [], true)
+ 5 APPPATH\Controllers\admin\guru.php(31): view('admin/guru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 02:08:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `guru` S...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `guru` S...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `guru` S...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` S...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(1031): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(863): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', Array)
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-06-26 02:08:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[Method: POST, Route: admin/guru/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` SET `user_id` = :user_id:, `nama_lengkap` = :nama_lengkap:, `nip` = :nip:, `jenis_kelamin` = :jenis_kelamin:, `mata_pelajaran` = :mata_pelajaran:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:
+WHERE `guru`.`id` IN :guru.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 02:08:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` SET `user_id` = :user_id:, `nama_lengkap` = :nama_lengkap:, `nip` = :nip:, `jenis_kelamin` = :jenis_kelamin:, `mata_pelajaran` = :mata_pelajaran:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:
+WHERE `guru`.`id` IN :guru.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 02:08:53 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` SET `user_id` = :user_id:, `nama_lengkap` = :nama_lengkap:, `nip` = :nip:, `jenis_kelamin` = :jenis_kelamin:, `mata_pelajaran` = :mata_pelajaran:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:
+WHERE `guru`.`id` IN :guru.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 02:09:18 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `guru` S...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `guru` S...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `guru` S...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` S...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(1031): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(863): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', Array)
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-06-26 02:09:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[Method: POST, Route: admin/guru/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` SET `user_id` = :user_id:, `nama_lengkap` = :nama_lengkap:, `nip` = :nip:, `jenis_kelamin` = :jenis_kelamin:, `mata_pelajaran` = :mata_pelajaran:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:
+WHERE `guru`.`id` IN :guru.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 02:09:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` SET `user_id` = :user_id:, `nama_lengkap` = :nama_lengkap:, `nip` = :nip:, `jenis_kelamin` = :jenis_kelamin:, `mata_pelajaran` = :mata_pelajaran:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:
+WHERE `guru`.`id` IN :guru.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 02:09:18 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `guru` SET `user_id` = \'\', `nama_lengkap` = \'Asep Suhendar Alidzkar\', `nip` = \'2324223462\', `jenis_kelamin` = \'Laki-laki\', `mata_pelajaran` = \'PAI\', `alamat` = \'Jl. Bojong Kaler\', `kontak` = \'2322343423\', `email` = \'Udin@gmail.com\', `status_akun` = \'aktif\', `sekolah_id` = \'1\'
+WHERE `guru`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `guru` SET `user_id` = :user_id:, `nama_lengkap` = :nama_lengkap:, `nip` = :nip:, `jenis_kelamin` = :jenis_kelamin:, `mata_pelajaran` = :mata_pelajaran:, `alamat` = :alamat:, `kontak` = :kontak:, `email` = :email:, `status_akun` = :status_akun:, `sekolah_id` = :sekolah_id:
+WHERE `guru`.`id` IN :guru.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\admin\guru.php(88): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->update('1')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 02:10:22 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) in C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\cbt-aktara-v2\app\Controllers\admin\guru.php(53): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\guru->store()
+#9 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+#10 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\cbt-aktara-v2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\cbt-aktara-v2\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-06-26 02:10:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[Method: POST, Route: admin/guru/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (:user_id:, :nama_lengkap:, :nip:, :jenis_kelamin:, :mata_pelajaran:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\admin\guru.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 02:10:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (\'\', \'wiwiw\', \'33333333333\', \'Laki-laki\', \'qur\\\'an Hadist\', \'rancaekek\', \'6565656565\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (\'\', \'wiwiw\', \'33333333333\', \'Laki-laki\', \'qur\\\'an Hadist\', \'rancaekek\', \'6565656565\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (:user_id:, :nama_lengkap:, :nip:, :jenis_kelamin:, :mata_pelajaran:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\admin\guru.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+CRITICAL - 2025-06-26 02:10:22 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin`.`guru`, CONSTRAINT `fk_user_guru` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (\'\', \'wiwiw\', \'33333333333\', \'Laki-laki\', \'qur\\\'an Hadist\', \'rancaekek\', \'6565656565\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (\'\', \'wiwiw\', \'33333333333\', \'Laki-laki\', \'qur\\\'an Hadist\', \'rancaekek\', \'6565656565\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (\'\', \'wiwiw\', \'33333333333\', \'Laki-laki\', \'qur\\\'an Hadist\', \'rancaekek\', \'6565656565\', \'asepsuhendaralidzkar@gmail.com\', \'aktif\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guru` (`user_id`, `nama_lengkap`, `nip`, `jenis_kelamin`, `mata_pelajaran`, `alamat`, `kontak`, `email`, `status_akun`, `sekolah_id`) VALUES (:user_id:, :nama_lengkap:, :nip:, :jenis_kelamin:, :mata_pelajaran:, :alamat:, :kontak:, :email:, :status_akun:, :sekolah_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\admin\guru.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\guru->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\guru))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 02:45:10 --> ErrorException: Undefined variable $guru
+[Method: GET, Route: admin/mapel/create]
+in APPPATH\Views\admin\mapel\create.php on line 46.
+ 1 APPPATH\Views\admin\mapel\create.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guru', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/mapel/create', [], true)
+ 5 APPPATH\Controllers\admin\mapel.php(34): view('admin/mapel/create')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 02:45:46 --> ErrorException: Undefined variable $guru
+[Method: GET, Route: admin/mapel/create]
+in APPPATH\Views\admin\mapel\create.php on line 46.
+ 1 APPPATH\Views\admin\mapel\create.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guru', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/mapel/create', [], true)
+ 5 APPPATH\Controllers\admin\mapel.php(34): view('admin/mapel/create')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 02:48:02 --> ErrorException: Undefined variable $guru
+[Method: GET, Route: admin/mapel/create]
+in APPPATH\Views\admin\mapel\create.php on line 46.
+ 1 APPPATH\Views\admin\mapel\create.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guru', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/mapel/create', [], true)
+ 5 APPPATH\Controllers\admin\mapel.php(36): view('admin/mapel/create')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 02:49:54 --> ErrorException: Undefined variable $guru
+[Method: GET, Route: admin/mapel/create]
+in APPPATH\Views\admin\mapel\create.php on line 46.
+ 1 APPPATH\Views\admin\mapel\create.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guru', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/mapel/create', [], true)
+ 5 APPPATH\Controllers\admin\mapel.php(36): view('admin/mapel/create')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 02:50:05 --> ErrorException: Undefined variable $guru
+[Method: GET, Route: admin/mapel/create]
+in APPPATH\Views\admin\mapel\create.php on line 46.
+ 1 APPPATH\Views\admin\mapel\create.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guru', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\mapel\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/mapel/create', [], true)
+ 5 APPPATH\Controllers\admin\mapel.php(36): view('admin/mapel/create')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 02:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 02:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 03:49:45 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: admin/jenisbuku]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 03:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 03:51:26 --> ErrorException: Undefined variable $jenis
+[Method: GET, Route: admin/jenisbuku]
+in APPPATH\Views\admin\jenisbuku\index.php on line 29.
+ 1 APPPATH\Views\admin\jenisbuku\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenis', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/index', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(21): view('admin/jenisbuku/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 03:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 03:52:10 --> ErrorException: Undefined variable $data
+[Method: GET, Route: admin/jenisbuku]
+in APPPATH\Views\admin\jenisbuku\index.php on line 29.
+ 1 APPPATH\Views\admin\jenisbuku\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/index', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(21): view('admin/jenisbuku/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 03:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 03:53:09 --> ErrorException: Undefined variable $data
+[Method: GET, Route: admin/jenisbuku]
+in APPPATH\Views\admin\jenisbuku\index.php on line 29.
+ 1 APPPATH\Views\admin\jenisbuku\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/index', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(21): view('admin/jenisbuku/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 03:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 03:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 04:05:39 --> ErrorException: Undefined variable $jenisbuku
+[Method: GET, Route: admin/jenisbuku/edit/1]
+in APPPATH\Views\admin\jenisbuku\edit.php on line 51.
+ 1 APPPATH\Views\admin\jenisbuku\edit.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenisbuku', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/edit', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(44): view('admin/jenisbuku/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 04:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 04:08:49 --> ErrorException: Undefined variable $jenis_buku
+[Method: GET, Route: admin/jenisbuku/edit/1]
+in APPPATH\Views\admin\jenisbuku\edit.php on line 51.
+ 1 APPPATH\Views\admin\jenisbuku\edit.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenis_buku', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/edit', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(44): view('admin/jenisbuku/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 04:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 04:09:25 --> ErrorException: Undefined variable $j
+[Method: GET, Route: admin/jenisbuku/edit/1]
+in APPPATH\Views\admin\jenisbuku\edit.php on line 51.
+ 1 APPPATH\Views\admin\jenisbuku\edit.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $j', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/edit', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(44): view('admin/jenisbuku/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 04:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 04:12:18 --> ErrorException: Undefined variable $jenis_buku
+[Method: GET, Route: admin/jenisbuku/edit/1]
+in APPPATH\Views\admin\jenisbuku\edit.php on line 51.
+ 1 APPPATH\Views\admin\jenisbuku\edit.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenis_buku', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/edit', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(44): view('admin/jenisbuku/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 04:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 04:13:08 --> ErrorException: Undefined variable $jenisbuku
+[Method: GET, Route: admin/jenisbuku/edit/1]
+in APPPATH\Views\admin\jenisbuku\edit.php on line 51.
+ 1 APPPATH\Views\admin\jenisbuku\edit.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenisbuku', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/edit', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(44): view('admin/jenisbuku/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 04:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 04:14:20 --> ErrorException: Undefined variable $jenisbuku
+[Method: GET, Route: admin/jenisbuku/edit/1]
+in APPPATH\Views\admin\jenisbuku\edit.php on line 56.
+ 1 APPPATH\Views\admin\jenisbuku\edit.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenisbuku', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php', 56)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/edit', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(44): view('admin/jenisbuku/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 04:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 04:15:55 --> ErrorException: Undefined variable $jenisbuku
+[Method: GET, Route: admin/jenisbuku/edit/1]
+in APPPATH\Views\admin\jenisbuku\edit.php on line 56.
+ 1 APPPATH\Views\admin\jenisbuku\edit.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenisbuku', 'C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php', 56)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\cbt-aktara-v2\\app\\Views\\admin\\jenisbuku\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/jenisbuku/edit', [], true)
+ 5 APPPATH\Controllers\admin\jenisbuku.php(45): view('admin/jenisbuku/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\jenisbuku->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\jenisbuku))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\cbt-aktara-v2\\public\\index.php')
+DEBUG - 2025-06-26 04:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 04:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
