@@ -7,7 +7,7 @@ use App\Models\AlokasiWaktuModel;
 use App\Models\JadwalUjianModel;
 use App\Models\SesiUjianModel;
 
-class alokasiwaktucontroller extends BaseController
+class AlokasiWaktuController extends BaseController
 {
     protected $alokasiModel;
     protected $jadwalModel;
