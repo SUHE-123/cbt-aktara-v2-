@@ -5,7 +5,7 @@ namespace App\Controllers\Guru;
 use App\Controllers\BaseController;
 use App\Models\SesiUjianModel;
 
-class sesiujian extends BaseController
+class SesiUjian extends BaseController
 {
     protected $sesiModel;
 

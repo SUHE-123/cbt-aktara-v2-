@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\SoalModel;
 use App\Models\BankSoalModel;
 
-class soalcontroller extends BaseController
+class SoalController extends BaseController
 {
     protected $soalModel;
     protected $bankSoalModel;

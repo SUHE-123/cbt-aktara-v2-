@@ -7,7 +7,7 @@ use App\Models\UserModel;
 use App\Models\GuruModel;
 use App\Models\SiswaModel;
 
-class users extends BaseController
+class Users extends BaseController
 {
     protected $userModel;
     protected $guruModel;

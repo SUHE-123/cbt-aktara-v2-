@@ -5,7 +5,7 @@ namespace App\Controllers\Guru;
 use App\Controllers\BaseController;
 use App\Models\JenisUjianModel;
 
-class jenisujian extends BaseController
+class JenisUjian extends BaseController
 {
     protected $jenisModel;
 

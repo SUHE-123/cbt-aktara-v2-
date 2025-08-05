@@ -11,7 +11,7 @@ use App\Models\MataPelajaranModel;
 use App\Models\JenisUjianModel;
 use App\Models\SekolahModel;
 
-class statusujiancontroller extends BaseController
+class StatusUjianController extends BaseController
 {
     public function index()
     {

@@ -9,7 +9,7 @@ use App\Models\BankSoalModel;
 use App\Models\JenisUjianModel;
 use App\Models\SekolahModel;
 
-class jadwalujian extends BaseController
+class JadwalUjian extends BaseController
 {
     protected $jadwalModel;
     protected $mapelModel;

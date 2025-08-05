@@ -7,7 +7,7 @@ use App\Models\SiswaModel;
 use App\Models\MapelModel;
 use App\Models\TokenModel;
 
-class dashboard extends BaseController
+class Dashboard extends BaseController
 {
     public function index()
     {

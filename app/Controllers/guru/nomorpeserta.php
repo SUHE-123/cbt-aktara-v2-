@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\NomorPesertaModel;
 use App\Models\SiswaModel;
 
-class nomorpeserta extends BaseController
+class NomorPeserta extends BaseController
 {
     protected $pesertaModel;
     protected $siswaModel;

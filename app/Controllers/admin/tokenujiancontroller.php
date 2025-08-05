@@ -5,7 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\TokenModel;
 
-class tokenujiancontroller extends BaseController
+class TokenUjianController extends BaseController
 {
     protected $tokenModel;
 

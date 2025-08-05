@@ -11,7 +11,7 @@ use App\Models\JadwalUjianModel;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-class rekapnilaicontroller extends BaseController
+class RekapNilaiController extends BaseController
 {
     protected $rekapNilaiModel;
     protected $siswaModel;

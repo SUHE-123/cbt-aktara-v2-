@@ -8,7 +8,7 @@ use App\Models\SiswaModel;
 use App\Models\StatusUjianModel;
 use App\Models\SekolahModel;
 
-class hasilujiancontroller extends BaseController
+class HasilUjianController extends BaseController
 {
     protected $hasilUjianModel;
     protected $statusUjianModel;

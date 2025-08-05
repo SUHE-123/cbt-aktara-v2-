@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\MapelModel;
 use App\Models\GuruModel;
 
-class mapel extends BaseController
+class Mapel extends BaseController
 {
     protected $mapelModel;
     protected $guruModel;

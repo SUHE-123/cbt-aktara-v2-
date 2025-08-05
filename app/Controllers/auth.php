@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 
-class auth extends BaseController
+class Auth extends BaseController
 {
     // Halaman login
     public function login()

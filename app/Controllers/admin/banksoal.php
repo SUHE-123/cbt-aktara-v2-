@@ -7,7 +7,7 @@ use App\Models\BankSoalModel;
 use App\Models\MapelModel;
 use App\Models\SoalModel;
 
-class banksoal extends BaseController
+class BankSoal extends BaseController
 {
     protected $bankSoalModel;
     protected $mapelModel;

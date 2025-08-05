@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\KoleksiBukuModel;
 use App\Models\JenisBukuModel;
 
-class koleksibuku extends BaseController
+class KoleksiBuku extends BaseController
 {
     protected $bukuModel;
     protected $jenisModel;

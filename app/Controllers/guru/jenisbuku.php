@@ -5,7 +5,7 @@ namespace App\Controllers\Guru;
 use App\Controllers\BaseController;
 use App\Models\JenisBukuModel;
 
-class jenisbuku extends BaseController
+class JenisBuku extends BaseController
 {
     protected $jenisBukuModel;
 

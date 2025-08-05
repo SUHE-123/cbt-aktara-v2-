@@ -5,7 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\UserModel;
 
-class profil extends BaseController
+class Profil extends BaseController
 {
     public function index()
     {
